@@ -52,7 +52,7 @@ class commentModel extends comment
 			$member_srl = $oComment->get('member_srl');
 
 			$oModuleModel = getModel('module');
-			$comment_config = $oModuleModel->getModulePartConfig('document', $module_srl);
+			$comment_config = $oModuleModel->getModulePartConfig('comment', $module_srl);
 
 			if($comment_config->use_vote_up != 'N' && $member_srl != $logged_info->member_srl)
 			{
